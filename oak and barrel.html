@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oak & Barrel | Restaurant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') center/cover no-repeat;
+      height: 100vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin-top: 10px;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    nav {
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .menu-item {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-item h4 {
+      margin-top: 0;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+    <script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    Chatbot.init({
+        chatflowid: "1810fea3-dfdf-4139-b790-1b5e6f78df48",
+        apiHost: "http://localhost:3000",
+    })
+</script>
+
+
+
+  <header>
+    <h1>Oak & Barrel</h1>
+    <p>Where flavor meets elegance</p>
+  </header>
+
+  <nav>
+    <a href="#menu">Menu</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <h4>Grilled Salmon</h4>
+        <p>Fresh Atlantic salmon grilled to perfection, served with seasonal vegetables.</p>
+      </div>
+      <div class="menu-item">
+        <h4>Classic Ribeye</h4>
+        <p>Juicy ribeye steak cooked to your liking with garlic herb butter.</p>
+      </div>
+      <div class="menu-item">
+        <h4>Wild Mushroom Risotto</h4>
+        <p>Creamy risotto with wild mushrooms, parmesan, and truffle oil.</p>
+      </div>
+      <div class="menu-item">
+        <h4>Chocolate Lava Cake</h4>
+        <p>Warm chocolate cake with a gooey center, served with vanilla ice cream.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Oak & Barrel</h2>
+    <p>
+      At Oak & Barrel, we believe dining should be an experience. Nestled in the heart of the city, our rustic yet modern ambiance pairs beautifully with a curated menu that celebrates local flavors, fine wines, and elegant dishes. Whether you're joining us for a romantic dinner, a family gathering, or a business lunch — we promise an unforgettable experience.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p style="text-align:center;">
+      📍 123 Main Street, Gourmet City, IN<br/>
+      📞 (123) 456-7890<br/>
+      📧 contact@oakandbarrel.com
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Oak & Barrel | Crafted with flavor and care
+  </footer>
+
+</body>
+</html>
