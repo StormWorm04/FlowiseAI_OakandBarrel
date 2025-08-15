@@ -1,4 +1,5 @@
 Setup Guide – Oak & Barrel AI Customer Support Agent
+
 📌 Overview
 This guide walks you through setting up the Flowise-powered Oak & Barrel Customer Support Agent using Google Generative AI and Pinecone Vector Database.
 By the end of this setup, you’ll have:
@@ -6,6 +7,7 @@ By the end of this setup, you’ll have:
 •	A semantic search-enabled FAQ system.
 •	A menu-based query assistant.
 ________________________________________
+
 1. Prerequisites
 Make sure you have:
 •	Node.js ≥ 18.x
@@ -16,15 +18,18 @@ Make sure you have:
 Install Flowise:
 npm install -g flowise
 ________________________________________
+
 2. Clone the Repository
 git clone https://github.com/yourusername/oak-barrel-support-agent.git
 cd oak-barrel-support-agent
 ________________________________________
+
 3. Start Flowise
 flowise start
 Open Flowise in your browser at:
 http://localhost:3000
 ________________________________________
+
 4. Create Chatbot Flow in Flowise
 Follow the chatbot structure shown below:
 Chatbot Flow Diagram
@@ -40,6 +45,7 @@ o	Environment: e.g., us-east1-gcp
 o	menu.csv (menu items)
 o	oak-and-barrel-qa.docx (FAQs)
 ________________________________________
+
 5. Configure Pinecone
 1.	Go to Pinecone Console.
 2.	Create a new index (flowise) with:
@@ -48,11 +54,13 @@ o	Metric: cosine
 3.	Add your Pinecone API Key and environment to the Flowise Pinecone Node.
 Example Config
 ________________________________________
+
 6. Upload Documents
 •	menu.csv → contains structured menu data.
 •	oak-and-barrel-qa.docx → contains FAQ responses.
 •	These will be converted to embeddings and stored in Pinecone.
 ________________________________________
+
 7. Embed Chatbot in Oak & Barrel Website
 In oak and barrel.html, add the Flowise embed script:
 <script type="module">
